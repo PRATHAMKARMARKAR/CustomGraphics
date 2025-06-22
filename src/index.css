@@ -1,0 +1,17 @@
+@import "tailwindcss";
+*{
+  overflow: hidden;
+}
+.centerSection{
+  height: 200px;
+  width: 200px;
+  background-image: url("./assets/logo.svg");
+  background-size: cover;
+}
+.overlay{
+  background-image: url("./assets/CustomGraphics.svg");
+  background-size: 100% 100%;
+}
+.string1{
+background-image: url("./assets/strings.png");
+}
