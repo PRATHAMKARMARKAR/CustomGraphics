@@ -7,7 +7,7 @@ const Navbar = ({ height }) => {
       <div className="main" style={{ height: `${height}%` }}>
         {/* Group wrapper: makes all inside hover/interactive */}
         <div
-          className="box group text-[#FD520F] text-xl flex justify-center items-center mt-3 cursor-pointer"
+          className="box group text-[#FD520F] text-2xl flex justify-center items-center mt-3 cursor-pointer"
           data-model-id="93:120-frame"
           style={{ fontFamily: "'Afacad', Helvetica" }}
           // Optional: make full block clickable
@@ -54,7 +54,7 @@ const Navbar = ({ height }) => {
               />
             </svg>
           </div>
-          <button className="h-full w-1/2 -ml-5  transition-all duration-300">
+          <button className="h-full w-1/2 -ml-5  -mt-10 transition-all duration-300">
             About us
           </button>
 
