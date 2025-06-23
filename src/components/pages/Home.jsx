@@ -86,13 +86,21 @@ const App = () => {
         </div>
 
         {/* Book button */}
-        <div
-          className="cta flex items-center justify-center -mt-10 gap-2 text-lg text-[#FD520F] w-64 border-2 border-[#FD520F] p-2 rounded-xl cursor-pointer"
-          onClick={handleBookNow}
-        >
-          Book an appointment
-          <IoArrowForwardCircleOutline className="text-[#FD520F] text-xl" />
-        </div>
+     <div
+  className="cta group flex items-center justify-center -mt-10 gap-2 text-lg 
+             text-[#FD520F] border-2 border-[#FD520F] 
+             hover:text-[#CABDBB] 
+             w-64 p-2 rounded-xl cursor-pointer 
+             transition-all duration-300"
+  onClick={handleBookNow}
+>
+  <span className="transition-colors duration-300 group-hover:text-[#CABDBB]">
+    Book an appointment
+  </span>
+  <IoArrowForwardCircleOutline className="text-xl transition-colors duration-300 group-hover:text-[#CABDBB]" />
+</div>
+
+
       </div>
 
       <Footer height={heightNavbar} margin={marginT} />
