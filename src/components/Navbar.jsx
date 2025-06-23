@@ -39,7 +39,7 @@ const Navbar = ({ height }) => {
               />
             </svg>
           </div>
-          <button className="h-full w-1/2 mb-30 -ml-16  transition-all duration-300">
+          <button className="h-full w-1/2 mb-30 -ml-24  transition-all duration-300">
             Home
           </button>
 
