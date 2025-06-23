@@ -44,7 +44,7 @@ const Navbar = ({ height }) => {
           </button>
 
           {/* String and Button: About Us */}
-          <div className="string1 h-full w-[100%] -ml-16 -mt-20">
+          <div className="string1 h-full w-[100%] -ml-10 -mt-20">
             <svg xmlns="http://www.w3.org/2000/svg" width="302" height="101" viewBox="0 0 302 101" fill="none">
               <path
                 d="M1.5 53.5001C1.5 53.5001 60.5 61.0001 63 85.5001C65.5 110 114 97.0001 127 76.0001C140 55.0001 127 53.5001 150.5 23.0001C174 -7.4999 214 -6.4999 183.5 33.5001C153 73.5001 217.668 95.453 243.5 97.0001C269.332 98.5473 236 76.0001 300.5 53.5001"
