@@ -39,7 +39,7 @@ const Navbar = ({ height }) => {
               />
             </svg>
           </div>
-          <button className="h-full w-1/2 mb-30 -ml-8  transition-all duration-300">
+          <button className="h-full w-1/2 mb-30 -ml-16  transition-all duration-300">
             Home
           </button>
 
@@ -54,12 +54,12 @@ const Navbar = ({ height }) => {
               />
             </svg>
           </div>
-          <button className="h-full w-1/2 -ml-5  -mt-10 transition-all duration-300">
+          <button className="h-full w-1/2 -ml-5  -mt-16 transition-all duration-300">
             About us
           </button>
 
           {/* String and (optional) other button */}
-          <div className="string1 h-full w-[100%] -ml-5 -mt-10">
+          <div className="string1 h-full w-[100%] -ml-5 -mt-16">
             <svg xmlns="http://www.w3.org/2000/svg" width="382" height="89" viewBox="0 0 382 89" fill="none">
               <path
                 d="M1.5 50.0001C27.6239 11.8746 94.5 -0.999939 114.5 28.5001C134.5 58.0001 220.011 45.3927 216.5 79.5001C212.989 113.607 316.284 10.8777 351.5 74.5001C351.266 31.5653 400 -24.9999 378.5 1.00006"
