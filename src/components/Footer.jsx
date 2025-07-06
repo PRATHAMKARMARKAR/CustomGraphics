@@ -1,10 +1,10 @@
 import React from 'react'
 import "./components.css"
-const Footer = ({ height,margin }) => {
+const Footer = ({ height }) => {
   return (
     <>
 
-    <div className="overlay md:mt-30 mt-40 px-10   w-full" style={{ height: `${height}%`,position: "fixed" }}></div>
+    <div className="overlay md:mt-30 mt-20 px-10   w-full" style={{ height: `${height}%`,position: "fixed" }}></div>
 
     </>
   )
