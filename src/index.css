@@ -1,15 +1,158 @@
 @import "tailwindcss";
-*{
-  overflow: hidden;
+
+* {
+  overflow-x: hidden;
+
 }
-.centerSection{
-  height: 200px;
-  width: 200px;
+
+.centerSection {
+  height: 250px;
+  width: 250px;
   background-image: url("./assets/logo.svg");
-  background-size: cover;
-}
-.overlay{
-  background-image: url("./assets/CustomGraphics.svg");
   background-size: 100% 100%;
 }
 
+.overlay {
+  background-image: url("./assets/CustomGraphics.svg");
+  background-size: 100% 100%;
+
+}
+
+@media (max-width: 1023px) {
+  .hide-on-small {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .STRING1{
+    display: none;
+  }
+  .hide-on-big {
+    display: none;
+  }
+  .STRINGONE{
+    height: 550px;
+    width: 105%;
+    background-image: url("./assets/Mainthread.png");
+    background-size: 100% 100%;
+  }
+}
+
+  .mainHb{
+    /* background-color: #FD520F; */
+ height: 100px;
+ width:100%;
+    background-image: url("./assets/mainstringbig.png");
+    background-size: 100% 100%;
+  } 
+/* ✅ Mobile-specific override */
+@media (max-width: 640px) {
+ 
+  .he{
+    height: 90px;
+    width: 100%;
+    background-image: url("./assets/Rectangle.png");
+    background-size: 100% 100%;
+  }
+  .mainHP{
+    /* background-color: #FD520F; */
+ height: 100px;
+ width:90%;
+    background-image: url("./assets/mainstringsmall.png");
+    background-size: 100% 100%;
+  }
+  .String1{
+    height: 80px;
+    width: 100%;
+    background-image: url("./assets/mainstringsmall.png");
+    background-size: 100% 100%;
+  }
+  .overlay {
+    height: 100%;
+    background-image: url("./assets/Group1.png");
+    background-size: 100% 100%;
+  }
+
+  .centerSection1 {
+    height: 150px;
+    width: 150px;
+    background-image: url("./assets/logo.svg");
+    background-size: 100% 100%;
+    display: none;
+  }
+
+  .centerSection2 {
+    height: 150px;
+    width: 150px;
+    background-image: url("./assets/logo.svg");
+    background-size: 100% 100%;
+    /* display: none; */
+  }
+
+  .Stringone {
+    height: 80px;
+    width: 80px;
+    background-image: url("./assets/Mainthread.png");
+    background-size: 100% 100%;
+  }
+
+  .Stringtwo {
+    height: 80px;
+    width: 80px;
+    background-image: url("./assets/STRINGTWO.svg");
+    background-size: 100% 100%;
+  }
+
+  .Stringthree {
+    height: 100px;
+    width: 100px;
+    background-image: url("./assets/STRINGFOUR.svg");
+    background-size: 100% 100%;
+  }
+
+  .Stringfour {
+    height: 80px;
+    width: 80px;
+    background-image: url("./assets/STRINGTHREE.svg");
+    background-size: 100% 100%;
+  }
+  .STRING1{
+    height: 400px;
+    width: 90%;
+    background-image: url("./assets/Mainthreadsmall.png");
+    background-size: 100% 100%;
+  }
+
+  .Stringfive {
+    height: 80px;
+    width: 80px;
+    background-image: url("./assets/STRINGFIVE.svg");
+    background-size: 100% 100%;
+  }
+.bookbutton:hover {
+  background-color: #FD520F;
+  color: white;
+}
+ .string1{
+    height: 80px;
+    width: 80px;
+    background-image: url("./assets/STRINGFIVE.svg");
+    background-size: 100% 100%;
+  }
+  .STRINGONE{
+   display: none;
+  }
+}
+.STRINGONE{
+    height: 550px;
+    width: 105%;
+    background-image: url("./assets/Mainthread.png");
+    background-size: 100% 100%;
+  }
+ 
+.centerSection1 {
+  height: 150px;
+  width: 150px;
+  background-image: url("./assets/logo.svg");
+  background-size: 100% 100%;
+}

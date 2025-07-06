@@ -3,8 +3,9 @@ import "./components.css"
 const Footer = ({ height,margin }) => {
   return (
     <>
-    <div className="overlay    w-full" style={{ height: `${height}%`, marginTop: `${margin}px` }}></div>
-    
+
+    <div className="overlay md:mt-30 mt-40 px-10   w-full" style={{ height: `${height}%`,position: "fixed" }}></div>
+
     </>
   )
 }
