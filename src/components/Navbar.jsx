@@ -1,24 +1,17 @@
-import React from "react";
-import "./components.css";
+import React from 'react'
 
-const Navbar = ({ height }) => {
+const Footer = () => {
   return (
     <>
-      <div style={{ fontFamily: "'Afacad', Helvetica" }}>
-        <div className="mainHb w-full bg-cover bg-center py-4">
-          <div className="flex justify-center  flex-wrap gap-52">
-            <button className="text-2xl  font-bold text-[#FD520F]">
-              Contact Us
-            </button>
-            <button className="text-2xl  font-bold text-[#FD520F]">Home</button>
-            <button className="text-2xl   font-bold text-[#FD520F]">
-              About Us
-            </button>
-          </div>
+    <div className="navbar text-[#FD520F] text-2xl  flex  justify-center gap-48 items-center   ">
+          <div className="ml-30 flex -mt-16  justify-center gap-48 items-center  ">
+           <div className="text ml-10  w-30">About Us</div>
+           <div className="text ml-10 w-30">Home</div>
+           <div className="text  w-30">Contact Us</div></div>
         </div>
-      </div>
+    
     </>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Footer
