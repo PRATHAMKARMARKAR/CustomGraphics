@@ -21,7 +21,7 @@
 
 .overlay {
   background-image: url("./assets/CustomGraphics.svg");
-  background-size: 100% 100%;
+  background-size: cover;
 
 }
 

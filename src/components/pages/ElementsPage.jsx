@@ -5,7 +5,7 @@ const ElementsPage = () => {
    const heightNavbar = 25;
   const marginT = 65;
   return (
-    <><div className="main h-screen  w-full">
+    <><div className="main h-screen  w-full ">
    <Header/>
    <div className="flex text-[#FD520F] mt-10  overflow-hidden">
     <div className="logo -mt-14 centerSection2"> </div>

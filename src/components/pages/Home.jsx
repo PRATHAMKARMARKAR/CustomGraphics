@@ -107,7 +107,7 @@ const App = () => {
 
           {/* Scroll to Elements button */}
           <div
-            className="group flex overflow-hidden items-center justify-center mt-4 gap-2 text-lg text-[#FD520F] border-[#FD520F] w-64 p-2 rounded-xl cursor-pointer transition-all duration-300 "
+            className="group flex overflow-hidden items-center justify-center mt-4 gap-2 text-lg text-[#FD520F] border-[#FD520F] w-64 h-20 p-2 rounded-xl cursor-pointer transition-all duration-300 "
             onClick={() => {
               const el = document.getElementById("elements-section");
               el && el.scrollIntoView({ behavior: "smooth" });
