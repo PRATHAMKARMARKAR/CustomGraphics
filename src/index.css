@@ -164,3 +164,22 @@
   background-image: url("./assets/logo.svg");
   background-size: 100% 100%;
 }
+.stringOurServices{
+
+ height: 600px;
+    width: 120%;
+  background-image: url("../public/StringOur.svg");
+  background-size: 100% 100%;
+  /* background-position: center;/ */
+}
+.card{
+  /* overflow: hidden; */
+ /* transform: scaleX(-1); */
+  /* background-color: white;  */
+height: 45%;
+width: 20%;
+/* background-image: url("../public/Flipcard1.svg"); */
+background-size: 100% 100%;
+
+
+}

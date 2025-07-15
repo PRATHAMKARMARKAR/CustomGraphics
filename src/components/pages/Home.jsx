@@ -6,6 +6,7 @@ import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import { FaRegArrowAltCircleDown } from "react-icons/fa";
 import ElementsPage from "./ElementsPage";
 import NavBig from "../NavBig";
+import OurServices from "./OurServices";
 
 const App = () => {
   const [index, setIndex] = useState(0);
@@ -125,6 +126,7 @@ const App = () => {
       <div id="elements-section">
         <ElementsPage />
       </div>
+     
     </>
   );
 };
