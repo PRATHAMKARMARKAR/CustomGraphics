@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from './Header'
 import Footer from '../Footer';
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 import OurServices from './OurServices';
 const ElementsPage = () => {
     let navigate = useNavigate();
