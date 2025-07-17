@@ -1,20 +1,34 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom';
-const Header = () => {
-    const navigate = useNavigate();
-  return (
-    <>
-     <div className="main h-20 overflow-hidden w-full  text-black flex items-center  justify-between ">
-   <div className="left centerSection1 "></div>
-   <div className="right flex gap-20 ml-8 mr-10 text-[#FD520F]  font-medium md:text-xl text-xs " style={{ fontFamily: "'Afacad', sans-serif" }}>
-    <h1>Contact us</h1>
-    <h1   onClick={() => navigate('/')}
-      className='cursor-pointer'>Home</h1>
-    <h1>About us</h1>
-   </div>
-     </div>
-    </>
-  )
-}
+import React from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 
-export default Header
+const Header = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  return (
+    <div className="main h-20 overflow-hidden w-full text-black flex items-center justify-between px-10">
+      <div className="left centerSection1"></div>
+
+      <div
+        className="right flex gap-20 ml-8 mr-10 text-[#FD520F] font-medium md:text-xl text-xs"
+        style={{ fontFamily: "'Afacad', sans-serif" }}
+      >
+        <h1 className="cursor-pointer hover:underline">Contact Us</h1>
+
+        <h1
+          onClick={() => navigate('/')}
+          className={`cursor-pointer ${
+            location.pathname === '/' ? 'underline decoration-[#FD520F] decoration-2 underline-offset-4'
+              : 'hover:underline'
+          }`}
+        >
+          Home
+        </h1>
+
+        <h1 className="cursor-pointer hover:underline">About Us</h1>
+      </div>
+    </div>
+  );
+};
+
+export default Header;
