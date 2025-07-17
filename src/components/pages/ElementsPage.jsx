@@ -36,7 +36,7 @@ const ElementsPage = () => {
           <div className=" mt-[300px] -ml-10  "></div>
         </div>
       </div>
-      <Footer height={heightNavbar} margin={marginT} />
+      {/* <Footer height={heightNavbar} margin={marginT} /> */}
     </>
   );
 }

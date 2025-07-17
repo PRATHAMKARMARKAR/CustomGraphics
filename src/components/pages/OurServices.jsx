@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Header from './Header';
-
+import Footer from '../OURFooter';
 const cardImages = [
   { back: '/FlipcardB.svg',front: '/Flipcard1.svg' },
   { back: '/FlipcardB.svg', front: '/Flipcard2.svg' },
@@ -16,7 +16,8 @@ const OurServices = () => {
     newFlipped[index] = !newFlipped[index];
     setFlippedCards(newFlipped);
   };
-
+const heightNavbar = 20;
+  const marginT = 30;
   return (
     <>
       <div className="main h-screen w-full">
@@ -38,6 +39,7 @@ const OurServices = () => {
           </div>
          <div className="stringOurServices2 overflow-hidden -mt-48  "></div>
       </div>
+        <Footer height={heightNavbar} margin={marginT} />
     </>
   );
 };

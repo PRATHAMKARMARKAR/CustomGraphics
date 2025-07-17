@@ -24,7 +24,10 @@
   background-size: cover;
 
 }
-
+.overlayone {
+  background-image: url("./assets/OurServices.svg");
+  background-size: cover;
+}
 @media (max-width: 1023px) {
   .hide-on-small {
     display: none;
