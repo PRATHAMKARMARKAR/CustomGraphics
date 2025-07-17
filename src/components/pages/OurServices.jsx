@@ -21,12 +21,12 @@ const OurServices = () => {
     <>
       <div className="main h-screen w-full">
         <Header />
-        <div className="stringOurServices overflow-hidden -mt-20 -ml-20">
-          <div className="flex justify-center items-center mt-14 h-full gap-4">
+        <div className="stringOurServices overflow-hidden -mt-20  ml-16"></div>
+          <div className="flex justify-center items-center  h-150 -mt-42 space-x-16">
             {cardImages.map((card, index) => (
               <div
                 key={index}
-                className="card transition-transform duration-500 cursor-pointer w-40 h-60 rounded-lg bg-cover bg-center"
+                className="card transition-transform duration-500 cursor-pointer w-40 h- rounded-lg bg-cover bg-center"
                 style={{
                   transform: flippedCards[index] ? 'scaleX(-1)' : 'scaleX(1)',
                   backgroundImage: `url("${flippedCards[index] ? card.back : card.front}")`,
@@ -36,7 +36,7 @@ const OurServices = () => {
               />
             ))}
           </div>
-        </div>
+         <div className="stringOurServices2 overflow-hidden -mt-40  "></div>
       </div>
     </>
   );

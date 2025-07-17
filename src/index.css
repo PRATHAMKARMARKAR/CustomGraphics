@@ -166,9 +166,17 @@
 }
 .stringOurServices{
 
- height: 600px;
-    width: 120%;
+ height: 200px;
+    width: 100%;
   background-image: url("../public/StringOur.svg");
+  background-size: 100% 150%;
+  /* background-position: center;/ */
+}
+.stringOurServices2{
+
+ height: 150px;
+    width: 100%;
+  background-image: url("../public/StringOur2.svg");
   background-size: 100% 100%;
   /* background-position: center;/ */
 }
