@@ -26,7 +26,7 @@ const OurServices = () => {
             {cardImages.map((card, index) => (
               <div
                 key={index}
-                className="card transition-transform duration-500 cursor-pointer w-40 h- rounded-lg bg-cover bg-center"
+                className="card transition-transform bg-white duration-500 cursor-pointer w-40 h- rounded-lg bg-cover bg-center"
                 style={{
                   transform: flippedCards[index] ? 'scaleX(-1)' : 'scaleX(1)',
                   backgroundImage: `url("${flippedCards[index] ? card.back : card.front}")`,
@@ -36,7 +36,7 @@ const OurServices = () => {
               />
             ))}
           </div>
-         <div className="stringOurServices2 overflow-hidden -mt-40  "></div>
+         <div className="stringOurServices2 overflow-hidden -mt-48  "></div>
       </div>
     </>
   );
