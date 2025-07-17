@@ -1,10 +1,10 @@
 import React from 'react'
 import "./components.css"
-const OURFooter = ({ height }) => {
+const OURFooter = ({  }) => {
   return (
     <>
 
-    <div className="overlayone md:bottom-1  bottom-1 px-10   w-full" style={{ height: `${height}%`, position: "fixed" }}></div>
+    <div className="overlayone md:bottom-1 h-40 bottom-1 px-10   w-[100%]" style={{ position: "fixed" }}></div>
 
     </>
   )
