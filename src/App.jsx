@@ -15,7 +15,7 @@ const App = () => {
     {/* <Header1/> */}
     {/* <ElementsPage/> */}
     {/* <OurServices/> */}
-     <Footer height={heightNavbar} margin={marginT} />
+   
     </>
   )
 }

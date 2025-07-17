@@ -119,7 +119,7 @@ const App = () => {
           </div>
         </div>
 
-        {/* <Footer height={heightNavbar} margin={marginT} /> */}
+        <Footer height={heightNavbar} margin={marginT} />
       </div>
 
       {/* Wrapped ElementsPage in a div with id */}

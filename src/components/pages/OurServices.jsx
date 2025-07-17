@@ -21,7 +21,7 @@ const OurServices = () => {
     <>
       <div className="main h-screen w-full">
         <Header />
-        <div className="stringOurServices overflow-hidden -mt-20  ml-16"></div>
+        <div className="stringOurServices overflow-hidden -mt-10  ml-16"></div>
           <div className="flex justify-center items-center  h-150 -mt-42 space-x-16">
             {cardImages.map((card, index) => (
               <div
