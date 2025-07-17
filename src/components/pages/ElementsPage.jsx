@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from './Header'
+import Headerone from './Headerone';
 import Footer from '../Footer';
 import { useNavigate } from "react-router-dom";
 
@@ -11,7 +11,7 @@ const ElementsPage = () => {
   return (
     <>
       <div className="main h-screen  w-full ">
-        <Header />
+        <Headerone />
         <div className="flex text-[#FD520F] overflow-hidden">
           <div className="logo -mt-14 centerSection2"> </div>
           <div className="STRINGONE "></div>
