@@ -18,8 +18,7 @@ const Header = () => {
         <h1
           onClick={() => navigate('/')}
           className={`cursor-pointer ${
-            location.pathname === '/' ? 'underline decoration-[#FD520F] decoration-2 underline-offset-4'
-              : 'hover:underline'
+            location.pathname === '/' ? 'underline' : ''
           }`}
         >
           Home

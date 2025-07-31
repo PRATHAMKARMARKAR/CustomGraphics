@@ -28,6 +28,17 @@
   background-image: url("./assets/OurServices.svg");
   background-size: cover;
 }
+.Footer {
+  background-image: url("./assets/Contactus.svg");
+  background-size: cover;
+
+}
+.screen{
+  /* height: 800px; */
+    width: 100%;
+   background-image: url("../public/Contactusnav.svg");
+  background-size: 100% 100%;
+}
 @media (max-width: 1023px) {
   .hide-on-small {
     display: none;
@@ -193,4 +204,30 @@ width: 20%;
 background-size: 100% 100%;
 
 
+}
+.stringone{
+  height: 200px;
+  width: 200px;
+  background-image: url("./assets/OString1.svg");
+  background-size: 100% 100%;
+}
+
+
+.stringtwo{
+  height: 200px;
+  width: 350px;
+  background-image: url("./assets/OString2.svg");
+  background-size: cover;
+}
+.stringthree{
+  height: 200px;
+  width: 300px;
+  background-image: url("./assets/OString3.svg");
+  background-size: cover;
+}
+.flipbutton
+{
+  height: 40px;width: 40px;
+  background-image: url("../public/Refresh.svg");
+  background-size: 100% 100%;
 }

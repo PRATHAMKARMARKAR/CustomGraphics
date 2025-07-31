@@ -1,45 +1,146 @@
-import React, { useState } from 'react';
-import Header from './Header';
-import Footer from '../OURFooter';
+import React, { useState } from "react";
+import Header from "./Header";
+import Footer from "../OURFooter";
+
 const cardImages = [
-  { back: '/FlipcardB.svg',front: '/Flipcard1.svg' },
-  { back: '/FlipcardB.svg', front: '/Flipcard2.svg' },
-  { back: '/FlipcardB.svg', front: '/Flipcard3.svg' },
-  { back: '/FlipcardB.svg', front: '/Flipcard4.svg' },
+  { front: "/Flipcard1.svg", back: "/Flipcard1.svg" },
+  { front: "/Flipcard1.svg", back: "/Flipcard1.svg" },
+  { front: "/Flipcard1.svg", back: "/Flipcard1.svg" },
+  { front: "/Flipcard1.svg", back: "/Flipcard1.svg" },
 ];
 
 const OurServices = () => {
-  const [flippedCards, setFlippedCards] = useState([false, false, false, false]);
+  const [flippedIndex, setFlippedIndex] = useState(null); // track which card is flipped
 
   const handleCardClick = (index) => {
-    const newFlipped = [...flippedCards];
-    newFlipped[index] = !newFlipped[index];
-    setFlippedCards(newFlipped);
+    setFlippedIndex((prevIndex) => (prevIndex === index ? null : index));
   };
-const heightNavbar = 20;
+
+  const heightNavbar = 20;
   const marginT = 30;
+
   return (
     <>
       <div className="main h-screen w-full">
         <Header />
-        <div className="stringOurServices overflow-hidden -mt-10  ml-16"></div>
-          <div className="flex justify-center items-center  h-150 -mt-42 space-x-16">
-            {cardImages.map((card, index) => (
-              <div
-                key={index}
-                className="card transition-transform bg-white duration-500 cursor-pointer w-40 h- rounded-lg bg-cover bg-center"
-                style={{
-                  transform: flippedCards[index] ? 'scaleX(-1)' : 'scaleX(1)',
-                  backgroundImage: `url("${flippedCards[index] ? card.back : card.front}")`,
-                //   backgroundColor:'white'
-                }}
-                onClick={() => handleCardClick(index)}
-              />
-            ))}
+        <div className="nav flex">
+          <div className="stringone ml-22 "></div>
+          <div className="stringtwo ml-50 "></div>
+          <div className="stringthree ml-70 "></div>
+        </div>
+        <div className="flex justify-center items-center h-150 -mt-42 space-x-8">
+          {/* Card 1 */}
+          <div
+            className="card bg-white transition-transform duration-500 cursor-pointer w-40 h-60 rounded-lg bg-cover bg-center"
+            style={{
+              transform: flippedIndex === 0 ? "scaleX(-1)" : "scaleX(1)",
+              backgroundImage: `url("${
+                flippedIndex === 0 ? cardImages[0].back : cardImages[0].front
+              }")`,
+            }}
+          >
+            <div
+              className="text text-center mt-30 text-3xl"
+              style={{
+                fontFamily: "'Afacad', Helvetica",
+                transform: flippedIndex === 0 ? "scaleX(-1)" : "scaleX(1)",
+                color: flippedIndex === 0 ? "#808080" : "#FD520F", // grey for back, orange for front
+              }}
+            >
+              {flippedIndex === 0 ? "WEB" : "DEV"}
+            </div>
+            <div
+              className="flipbutton ml-50 mt-16"
+              onClick={() => handleCardClick(0)}
+              style={{ transform: flippedIndex === 0 ? "scaleX(-1)" : "scaleX(1)" }}
+            ></div>
           </div>
-         <div className="stringOurServices2 overflow-hidden -mt-48  "></div>
+
+          {/* Card 2 */}
+          <div
+            className="card transition-transform duration-500 cursor-pointer w-40 h-60 rounded-lg bg-cover bg-center"
+            style={{
+              transform: flippedIndex === 1 ? "scaleX(-1)" : "scaleX(1)",
+              backgroundImage: `url("${
+                flippedIndex === 1 ? cardImages[1].back : cardImages[1].front
+              }")`,
+            }}
+          >
+            <div
+              className="text text-center mt-30 text-3xl"
+              style={{
+                fontFamily: "'Afacad', Helvetica",
+                transform: flippedIndex === 1 ? "scaleX(-1)" : "scaleX(1)",
+                color: flippedIndex === 1 ? "#808080" : "#FD520F",
+              }}
+            >
+              {flippedIndex === 1 ? "UI" : "UX"}
+            </div>
+            <div
+              className="flipbutton ml-50 mt-16"
+              onClick={() => handleCardClick(1)}
+              style={{ transform: flippedIndex === 1 ? "scaleX(-1)" : "scaleX(1)" }}
+            ></div>
+          </div>
+
+          {/* Card 3 */}
+          <div
+            className="card transition-transform duration-500 cursor-pointer w-40 h-60 rounded-lg bg-cover bg-center"
+            style={{
+              transform: flippedIndex === 2 ? "scaleX(-1)" : "scaleX(1)",
+              backgroundImage: `url("${
+                flippedIndex === 2 ? cardImages[2].back : cardImages[2].front
+              }")`,
+            }}
+          >
+            <div
+              className="text text-center mt-30 text-3xl"
+              style={{
+                fontFamily: "'Afacad', Helvetica",
+                transform: flippedIndex === 2 ? "scaleX(-1)" : "scaleX(1)",
+                color: flippedIndex === 2 ? "#808080" : "#FD520F",
+              }}
+            >
+              {flippedIndex === 2 ? "APP" : "MOBILE"}
+            </div>
+            <div
+              className="flipbutton ml-50 mt-16"
+              onClick={() => handleCardClick(2)}
+              style={{ transform: flippedIndex === 2 ? "scaleX(-1)" : "scaleX(1)" }}
+            ></div>
+          </div>
+
+          {/* Card 4 */}
+          <div
+            className="card transition-transform duration-500 cursor-pointer w-40 h-60 rounded-lg bg-cover bg-center"
+            style={{
+              transform: flippedIndex === 3 ? "scaleX(-1)" : "scaleX(1)",
+              backgroundImage: `url("${
+                flippedIndex === 3 ? cardImages[3].back : cardImages[3].front
+              }")`,
+            }}
+          >
+            <div
+              className="text text-center mt-30 text-3xl"
+              style={{
+                fontFamily: "'Afacad', Helvetica",
+                transform: flippedIndex === 3 ? "scaleX(-1)" : "scaleX(1)",
+                color: flippedIndex === 3 ? "#808080" : "#FD520F",
+              }}
+            >
+              {flippedIndex === 3 ? "GAME" : "DEV"}
+            </div>
+            <div
+              className="flipbutton ml-50 mt-16"
+              onClick={() => handleCardClick(3)}
+              style={{ transform: flippedIndex === 3 ? "scaleX(-1)" : "scaleX(1)" }}
+            ></div>
+          </div>
+        </div>
+
+        <div className="stringOurServices2 overflow-hidden -mt-44 ml-5"></div>
       </div>
-        <Footer height={heightNavbar} margin={marginT} />
+      <Footer height={heightNavbar} margin={marginT} />
     </>
   );
 };
