@@ -26,7 +26,7 @@ const OurServices = () => {
             {cardImages.map((card, index) => (
               <div
                 key={index}
-                className="card transition-transform duration-500 cursor-pointer w-40 h-60 rounded-lg bg-cover bg-center"
+                className="card transition-transform duration-500 cursor-pointer w-40 h-60 rounded-lg bg-cover bg-center overflow-hidden"
                 style={{
                   transform: flippedCards[index] ? 'scaleX(-1)' : 'scaleX(1)',
                   backgroundImage: `url("${flippedCards[index] ? card.back : card.front}")`,
