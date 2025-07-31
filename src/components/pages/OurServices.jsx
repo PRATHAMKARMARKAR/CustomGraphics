@@ -17,7 +17,7 @@ const OurServices = () => {
   };
 
   const heightNavbar = 20;
-  const marginT = 30;
+  const marginT = 0;
 
   return (
     <>
@@ -28,10 +28,10 @@ const OurServices = () => {
           <div className="stringtwo ml-50 "></div>
           <div className="stringthree ml-70 "></div>
         </div>
-        <div className="flex justify-center items-center h-150 -mt-42 space-x-8">
+        <div className="flex justify-center items-center h-150 -mt-42 space-x-30">
           {/* Card 1 */}
           <div
-            className="card bg-white transition-transform duration-500 cursor-pointer w-40 h-60 rounded-lg bg-cover bg-center"
+            className="card transition-transform bg-white duration-500 cursor-pointer  h-60 rounded-lg bg-cover bg-center"
             style={{
               transform: flippedIndex === 0 ? "scaleX(-1)" : "scaleX(1)",
               backgroundImage: `url("${
@@ -50,7 +50,7 @@ const OurServices = () => {
               {flippedIndex === 0 ? "WEB" : "DEV"}
             </div>
             <div
-              className="flipbutton ml-50 mt-16"
+              className="flipbutton ml-40 mt-16"
               onClick={() => handleCardClick(0)}
               style={{ transform: flippedIndex === 0 ? "scaleX(-1)" : "scaleX(1)" }}
             ></div>
@@ -67,17 +67,17 @@ const OurServices = () => {
             }}
           >
             <div
-              className="text text-center mt-30 text-3xl"
+              className="text text-center   mt-30 text-3xl"
               style={{
                 fontFamily: "'Afacad', Helvetica",
                 transform: flippedIndex === 1 ? "scaleX(-1)" : "scaleX(1)",
                 color: flippedIndex === 1 ? "#808080" : "#FD520F",
               }}
             >
-              {flippedIndex === 1 ? "UI" : "UX"}
+              {flippedIndex === 1 ? "UX" : "DESIGN"}
             </div>
             <div
-              className="flipbutton ml-50 mt-16"
+              className="flipbutton ml-40 mt-16"
               onClick={() => handleCardClick(1)}
               style={{ transform: flippedIndex === 1 ? "scaleX(-1)" : "scaleX(1)" }}
             ></div>
@@ -101,10 +101,10 @@ const OurServices = () => {
                 color: flippedIndex === 2 ? "#808080" : "#FD520F",
               }}
             >
-              {flippedIndex === 2 ? "APP" : "MOBILE"}
+              {flippedIndex === 2 ? "MOBILE" : "SOLUTIONS"}
             </div>
             <div
-              className="flipbutton ml-50 mt-16"
+              className="flipbutton ml-40 mt-16"
               onClick={() => handleCardClick(2)}
               style={{ transform: flippedIndex === 2 ? "scaleX(-1)" : "scaleX(1)" }}
             ></div>
@@ -128,10 +128,10 @@ const OurServices = () => {
                 color: flippedIndex === 3 ? "#808080" : "#FD520F",
               }}
             >
-              {flippedIndex === 3 ? "GAME" : "DEV"}
+              {flippedIndex === 3 ? "DEV" : "PRODUCTS"}
             </div>
             <div
-              className="flipbutton ml-50 mt-16"
+              className="flipbutton ml-40 mt-16"
               onClick={() => handleCardClick(3)}
               style={{ transform: flippedIndex === 3 ? "scaleX(-1)" : "scaleX(1)" }}
             ></div>
