@@ -10,6 +10,7 @@ import OurServices from "./OurServices";
 
 const App = () => {
   const [index, setIndex] = useState(0);
+  const [isBouncing, setIsBouncing] = useState(false); // For click pop
   const heightNavbar = 20;
   const marginT = 30;
   const words = ["Solutions", "Products", "Design", "Development"];
@@ -51,6 +52,15 @@ const App = () => {
     window.open(calendarUrl, "_blank");
   };
 
+  const handleScrollWithPop = () => {
+    setIsBouncing(true);
+    setTimeout(() => {
+      const el = document.getElementById("elements-section");
+      el && el.scrollIntoView({ behavior: "smooth" });
+      setIsBouncing(false);
+    }, 300); // delay for bounce
+  };
+
   return (
     <>
       <div className="main h-screen w-full">
@@ -79,7 +89,7 @@ const App = () => {
               <AnimatePresence mode="wait" custom={direction}>
                 <motion.span
                   key={words[index]}
-                  className="absolute md:left-0 md:top-1/2 overflow-hidden   -translate-y-1/2 text-6xl md:text-6xl font-semibold text-[#CABDBB] z-10 md:z-10"
+                  className="absolute md:left-0 md:h-30 md:top-55 overflow-hidden -translate-y-1/2 text-6xl md:text-6xl font-semibold text-[#CABDBB] z-10 md:z-10"
                   variants={textVariant}
                   initial="hidden"
                   animate="visible"
@@ -94,7 +104,7 @@ const App = () => {
 
           {/* Book an appointment button */}
           <div
-            className="group flex overflow-hidden items-center justify-center -mt-10 gap-2 text-lg text-[#FD520F] border-2 border-[#FD520F] w-64 p-2 rounded-xl cursor-pointer transition-all duration-300 hover:bg-[#FD520F]/10"
+            className="group flex overflow-hidden items-center justify-center -mt-10 gap-2 text-lg text-[#FD520F] border-2 border-[#FD520F] w-64 p-2 rounded-xl cursor-pointer transition-all  hover:bg-[#FD520F]/10"
             onClick={handleBookNow}
           >
             <span
@@ -106,17 +116,27 @@ const App = () => {
             <IoArrowForwardCircleOutline className="text-xl" />
           </div>
 
-          {/* Scroll to Elements button */}
-          <div
-            className="group flex overflow-hidden items-center justify-center mt-4 gap-2 text-lg text-[#FD520F] border-[#FD520F] w-64 h-20 p-2 rounded-xl cursor-pointer transition-all duration-300 "
-            onClick={() => {
-              const el = document.getElementById("elements-section");
-              el && el.scrollIntoView({ behavior: "smooth" });
+          {/* Scroll to Elements button: appears, fades, and loops */}
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            animate={{
+              y: [100, 0, 0, 0, 0],
+              opacity: [0, 1, 0.6, 1, 0],
+              scale: isBouncing ? [1, 1.2, 0.95, 1] : 1,
             }}
+            transition={{
+              duration: 4,
+              ease: "easeInOut",
+              repeat: Infinity,
+              repeatType: "loop",
+              delay: 1,
+            }}
+            whileTap={{ scale: 1.1 }}
+            onClick={handleScrollWithPop}
+            className="group flex overflow-hidden items-center justify-center mt-4 gap-2 text-lg text-[#FD520F] border-[#FD520F] w-64 h-40 p-2 rounded-xl cursor-pointer transition-all duration-300"
           >
-            
-            <FaRegArrowAltCircleDown className="md:text-5xl   text-3xl" />
-          </div>
+            <FaRegArrowAltCircleDown className="md:text-5xl text-3xl" />
+          </motion.div>
         </div>
 
         <Footer height={heightNavbar} margin={marginT} />
@@ -126,7 +146,6 @@ const App = () => {
       <div id="elements-section">
         <ElementsPage />
       </div>
-     
     </>
   );
 };

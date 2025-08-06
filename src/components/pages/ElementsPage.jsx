@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from './Header'
+import Headerone from './Headerone';
 import Footer from '../Footer';
 import { useNavigate } from "react-router-dom";
 
@@ -11,14 +11,14 @@ const ElementsPage = () => {
   return (
     <>
       <div className="main h-screen  w-full ">
-        <Header />
+        <Headerone />
         <div className="flex text-[#FD520F] overflow-hidden">
           <div className="logo -mt-14 centerSection2"> </div>
           <div className="STRINGONE "></div>
           <div className="   STRING1   -ml-12  md:mb-14  md:h-full   mt-5 md:mt-2  "></div>
           <div className="bookbutton h-7 w-32 border-2 mt-16  overflow-hidden   md:hover:text-gray-400 md:hover:border-[#FD520F]   -ml-60 md:h-10 md:w-52  md:px-3 text-center md:-ml-[1250px] 2xl:-mr-10  rounded-4xl bg-white md:mt-[330px] "
-    onClick={()  => navigate("/Ourservice")
-}>
+           onClick={()  => navigate("/Ourservice")
+            }>
             Our Services
           </div>
           <div className="  mt-[60px] -ml-24  "></div>
@@ -36,7 +36,7 @@ const ElementsPage = () => {
           <div className=" mt-[300px] -ml-10  "></div>
         </div>
       </div>
-      <Footer height={heightNavbar} margin={marginT} />
+      {/* <Footer height={heightNavbar} margin={marginT} /> */}
     </>
   );
 }

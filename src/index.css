@@ -24,7 +24,27 @@
   background-size: cover;
 
 }
+.overlayone {
+  background-image: url("./assets/OurServices.svg");
+  background-size: cover;
+}
+.Footer {
+  background-image: url("./assets/ContactusWide.svg");
+  background-size: cover;
 
+}
+.screen{
+  /* height: 800px; */
+    width: 100%;
+   background-image: url("../public/ContactusString.png");
+  background-size: 100% 100%;
+}
+.telephone{
+  height: 100%;
+  width : 100%;
+  background-image: url("../public/Telephone.svg");
+  background-size: 100% 100%;
+}
 @media (max-width: 1023px) {
   .hide-on-small {
     display: none;
@@ -166,9 +186,17 @@
 }
 .stringOurServices{
 
- height: 600px;
-    width: 120%;
+ height: 200px;
+    width: 100%;
   background-image: url("../public/StringOur.svg");
+  background-size: 100% 150%;
+  /* background-position: center;/ */
+}
+.stringOurServices2{
+
+ height: 200px;
+    width: 100%;
+  background-image: url("../public/StringOur2.svg");
   background-size: 100% 100%;
   /* background-position: center;/ */
 }
@@ -177,9 +205,51 @@
  /* transform: scaleX(-1); */
   /* background-color: white;  */
 height: 45%;
-width: 20%;
+width: 15%;
 /* background-image: url("../public/Flipcard1.svg"); */
 background-size: 100% 100%;
 
 
+}
+.stringone{
+  height: 200px;
+  width: 200px;
+  background-image: url("./assets/OString1.svg");
+  background-size: 100% 100%;
+}
+
+
+.stringtwo{
+  height: 200px;
+  width: 350px;
+  background-image: url("./assets/OString2.svg");
+  background-size: cover;
+}
+.stringthree{
+  height: 200px;
+  width: 300px;
+  background-image: url("./assets/OString3.svg");
+  background-size: cover;
+}
+.flipbutton
+{
+  height: 40px;width: 40px;
+  background-image: url("../public/Refresh.svg");
+  background-size: 100% 100%;
+}
+
+@media (min-width: 1450px) {
+  .stringtwo{
+    /* height: 180px; */
+    width: 450px;
+    background-image: url("./assets/OString2.svg");
+    background-size: cover;
+  }
+  .screen{
+  height: 100%;
+    width: 85%;
+ 
+   background-image: url("../public/ContactusString.png");
+  background-size: cover;
+}
 }
