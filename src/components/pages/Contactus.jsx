@@ -4,22 +4,22 @@ import Footer1 from '../../Footer1';
 // import './Contactus.css'; // ✅ Make sure this is imported
 
 const Contactus = () => {
-  const heightNavbar = 10;
-
+    
   return (
-    <>
-      <div className="main min-h-screen w-full flex flex-col">
-        <Header />
+   <>
+   <div className="main h-screen w-full overflow-hidden">
+   <Header/>
+        <div className="flex screen h-[800px] -mt-30 2xl:-mt-45  ">
+          <div className='telephone'></div>
+     {/* <div className="bookbutton h-7 w-32   text-center rounded-4xl border-2 md:hover:text-gray-400 md:hover:border-[#FD520F]  ">
+            Our Projects
+     </div> */}
+    </div>
 
-        <div className="flex flex-col items-center justify-center gap-8 mt-10">
-          <div className="screen" />
-          <div className="screen1" />
-        </div>
       </div>
-
-      <Footer1 height={heightNavbar} />
-    </>
-  );
-};
+      <Footer1 height={30} />
+   </>
+  )
+}
 
 export default Contactus;

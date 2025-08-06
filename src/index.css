@@ -29,28 +29,21 @@
   background-size: cover;
 }
 .Footer {
-  background-image: url("./assets/Contactus.svg");
+  background-image: url("./assets/ContactusWide.svg");
   background-size: cover;
 
 }
-.screen {
-  height: 300px;
-  width: 80%;
-  background-image: url("/assets/Telephone.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 1rem;
+.screen{
+  /* height: 800px; */
+    width: 100%;
+   background-image: url("../public/ContactusString.png");
+  background-size: 100% 100%;
 }
-
-.screen1 {
-  height: 300px;
-  width: 80%;
-  background-image: url("/assets/Contactus.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 1rem;
+.telephone{
+  height: 100%;
+  width : 100%;
+  background-image: url("../public/Telephone.svg");
+  background-size: 100% 100%;
 }
 
 
@@ -245,4 +238,20 @@ background-size: 100% 100%;
   height: 40px;width: 40px;
   background-image: url("../public/Refresh.svg");
   background-size: 100% 100%;
+}
+
+@media (min-width: 1450px) {
+  .stringtwo{
+    /* height: 180px; */
+    width: 450px;
+    background-image: url("./assets/OString2.svg");
+    background-size: cover;
+  }
+  .screen{
+  height: 100%;
+    width: 85%;
+ 
+   background-image: url("../public/ContactusString.png");
+  background-size: cover;
+}
 }

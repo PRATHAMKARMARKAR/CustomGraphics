@@ -104,7 +104,7 @@ const App = () => {
 
           {/* Book an appointment button */}
           <div
-            className="group flex overflow-hidden items-center justify-center -mt-5 gap-2 text-lg text-[#FD520F] border-2 border-[#FD520F] w-64 p-2 rounded-xl cursor-pointer transition-all duration-300 hover:bg-[#FD520F]/10"
+            className="group flex overflow-hidden items-center justify-center -mt-10 gap-2 text-lg text-[#FD520F] border-2 border-[#FD520F] w-64 p-2 rounded-xl cursor-pointer transition-all  hover:bg-[#FD520F]/10"
             onClick={handleBookNow}
           >
             <span
