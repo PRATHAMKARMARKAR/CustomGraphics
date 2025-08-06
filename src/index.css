@@ -33,12 +33,27 @@
   background-size: cover;
 
 }
-.screen{
-  /* height: 800px; */
-    width: 100%;
-   background-image: url("../public/Contactusnav.svg");
-  background-size: 100% 100%;
+.screen {
+  height: 300px;
+  width: 80%;
+  background-image: url("/assets/Telephone.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 1rem;
 }
+
+.screen1 {
+  height: 300px;
+  width: 80%;
+  background-image: url("/assets/Contactus.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 1rem;
+}
+
+
 @media (max-width: 1023px) {
   .hide-on-small {
     display: none;

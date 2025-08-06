@@ -138,7 +138,7 @@ const OurServices = () => {
           </div>
         </div>
 
-        <div className="stringOurServices2 overflow-hidden -mt-44 ml-5"></div>
+        <div className="stringOurServices2 overflow-hidden -mt-44 "></div>
       </div>
       <Footer height={heightNavbar} margin={marginT} />
     </>

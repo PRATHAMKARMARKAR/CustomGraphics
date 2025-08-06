@@ -1,21 +1,25 @@
-import React from 'react'
-import Header from './Header'
-import Footer1 from '../../Footer1'
+import React from 'react';
+import Header from './Header';
+import Footer1 from '../../Footer1';
+// import './Contactus.css'; // ✅ Make sure this is imported
+
 const Contactus = () => {
-    const heightNavbar = 20;
+  const heightNavbar = 10;
+
   return (
-   <>
-   <div className="main h-screen w-full">
-   <Header/>
-    <div className="flex screen h-[800px] -mt-30">
-     <div className="bookbutton h-7 w-32   text-center rounded-4xl border-2 md:hover:text-gray-400 md:hover:border-[#FD520F]  ">
-            Our Projects
-     </div>
-    </div>
+    <>
+      <div className="main min-h-screen w-full flex flex-col">
+        <Header />
 
-   </div><Footer1 height={heightNavbar} />
-   </>
-  )
-}
+        <div className="flex flex-col items-center justify-center gap-8 mt-10">
+          <div className="screen" />
+          <div className="screen1" />
+        </div>
+      </div>
 
-export default Contactus
+      <Footer1 height={heightNavbar} />
+    </>
+  );
+};
+
+export default Contactus;
