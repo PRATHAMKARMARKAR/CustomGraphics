@@ -117,26 +117,18 @@ const App = () => {
           </div>
 
           {/* Scroll to Elements button: appears, fades, and loops */}
-          <motion.div
-            initial={{ opacity: 0, y: 100 }}
-            animate={{
-              y: [100, 0, 0, 0, 0],
-              opacity: [0, 1, 0.6, 1, 0],
-              scale: isBouncing ? [1, 1.2, 0.95, 1] : 1,
-            }}
-            transition={{
-              duration: 4,
-              ease: "easeInOut",
-              repeat: Infinity,
-              repeatType: "loop",
-              delay: 1,
-            }}
-            whileTap={{ scale: 1.1 }}
-            onClick={handleScrollWithPop}
-            className="group flex overflow-hidden items-center justify-center mt-4 gap-2 text-lg text-[#FD520F] border-[#FD520F] w-64 h-40 p-2 rounded-xl cursor-pointer transition-all duration-300"
-          >
-            <FaRegArrowAltCircleDown className="md:text-5xl text-3xl" />
-          </motion.div>
+          <div
+  onClick={handleScrollWithPop}
+  className="group flex items-center justify-center mt-4 gap-2 text-lg text-[#FD520F]  overflow-hidden  w-64 p-2 rounded-xl cursor-pointer transition-all duration-300 hover:bg-[#FD520F]/10"
+>
+  <span
+    className="transition-colors group-hover:text-[#CABDBB]"
+    style={{ fontFamily: "'Afacad', sans-serif" }}
+  >
+    
+  </span>
+  <FaRegArrowAltCircleDown size={30} className="text-xl" />
+</div>
         </div>
 
         <Footer height={heightNavbar} margin={marginT} />

@@ -34,17 +34,19 @@
 
 }
 .screen{
-  /* height: 800px; */
-    width: 100%;
+  height: 800px;
+    width: 80%;
    background-image: url("../public/ContactusString.png");
   background-size: 100% 100%;
 }
 .telephone{
-  height: 100%;
-  width : 100%;
+  height: 80%;
+  width : 70%;
   background-image: url("../public/Telephone.svg");
   background-size: 100% 100%;
 }
+
+
 @media (max-width: 1023px) {
   .hide-on-small {
     display: none;
@@ -246,10 +248,10 @@ background-size: 100% 100%;
     background-size: cover;
   }
   .screen{
-  height: 100%;
-    width: 85%;
+  height: 75%;
+    width: 80%;
  
    background-image: url("../public/ContactusString.png");
-  background-size: cover;
+  background-size: 115% 100%;
 }
 }
