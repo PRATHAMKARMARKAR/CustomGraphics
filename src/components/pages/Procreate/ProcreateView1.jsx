@@ -1,7 +1,6 @@
 import characterImage from '../../../assets/CharacterImage.png';
 import comicImage from '../../../assets/ComicImage.png';
 import { ProjectCard } from '../../../common/ProjectCard';
-import './a.css'
 
 const ProcreateView1 = () => {
   return (
@@ -19,18 +18,15 @@ const ProcreateView1 = () => {
             </div>
             <div className="md:col-span-7 h-full relative overflow-visible">
               <div className="w-full h-full min-h-[180px] border-2 border-orange-500 rounded-lg relative bg-white">
-                <p className="absolute top-3 left-3 text-lg font-semibold text-gray-800 z-20 bg-white/90 px-2 py-1 rounded shadow-sm">
+                <p className="absolute top-3 left-1/2 transform -translate-x-1/2 text-lg font-semibold text-gray-800 z-20 bg-white/90 px-2 py-1 ">
                   Character creation/storyboarding for Brand Identity
                 </p>
               </div>
-              {/* Business people image positioned outside and overlapping the div */}
-                        <img 
+              {/* Business people image positioned below heading, centered, and slightly overflowing */}
+              <img 
                 src={characterImage} 
                 alt="Business People" 
-                className="custom absolute top-4 -right-2 w-[95%] h-[85%] object-contain z-10 pointer-events-none"
-                style={{ 
-                  transform: 'translateX(5px)'
-                }}
+                className="absolute top-12 left-1/2 transform -translate-x-1/2 w-[105%] h-[75%] object-contain z-10 pointer-events-none"
               />
             </div>
           </div>
@@ -39,7 +35,7 @@ const ProcreateView1 = () => {
 
       </div>
 
-      <div className="grid grid-cols-12 gap-4">
+      <div className="grid  grid-cols-12 gap-4">
         <div className="col-span-12 relative">
           <div className="w-full h-32 border-2 border-orange-500 rounded-lg overflow-hidden">
             <img 
@@ -47,9 +43,13 @@ const ProcreateView1 = () => {
               alt="Comic Strip" 
               className="w-full h-full object-cover"
             />
-            <div className="absolute right-3 bottom-0 top-0 flex items-center justify-center">
-              <div className="transform origin-center translate-y-10 whitespace-nowrap">
-                <span className="text-xl font-bold text-gray-700 bg-white/80 px-2 py-1 rounded">Comic?</span>
+            {/* Comic text positioned in the gap between panels */}
+            <div className="absolute right-60 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+              <div className="writing-mode-vertical text-orientation-mixed">
+                <span className="text-2xl font-bold text-gray-700 bg-white/90 px-2 py-1 rounded rotate-180 " 
+                      style={{ writingMode: 'vertical-lr', textOrientation: 'mixed' }}>
+                  Comic?
+                </span>
               </div>
             </div>
           </div>
