@@ -6,7 +6,8 @@ export const ProjectCard = ({
     titleText = "Project Title",
     borderTextPosition = [],
     variant = "outline",
-    className = ""
+    className = "",
+    showArrow= true
 }) => {
     const cardRef = useRef(null);
     const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
@@ -60,7 +61,7 @@ export const ProjectCard = ({
                 <div className="text-center px-4 py-2">
                 <h3 className="text-[20px] sm:text-[24px] md:text-[28px] font-bold">
                     {titleText}
-                    <span className="ml-2 text-base md:text-lg">↗</span>
+                    {showArrow ? <span className="ml-2 text-base md:text-lg">↗</span> : null}
                 </h3>
             </div>
         </div>

@@ -16,7 +16,6 @@ const Projects = () => {
   return (
     <div className="min-h-screen bg-white font-['Afacad'] flex flex-col overflow-x-hidden">
       <Header />
-      
       <div className="flex-1 w-full mx-auto px-2 sm:px-4 py-2 sm:py-4 flex flex-col  md:max-w-[95%] lg:max-w-[98%]">
         <div className="flex-1 grid grid-cols-1 lg:grid-cols-12 gap-2 sm:gap-4">
           <div className="lg:col-span-7 flex flex-col gap-2 sm:gap-4">
