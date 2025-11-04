@@ -7,6 +7,9 @@ import Contactus from './pages/Contactus';
 import Projects from './pages/OurProjects/Projects';
 import Procreate from './pages/Procreate/Procreate';
 import ProcreateView1 from './pages/Procreate/ProcreateView1';
+import MatriMO from './pages/MatriMo/MatriMO';
+import ApparelDesign from './pages/ApparelDesign/ApparelDesign';
+import BaggageBugs from './pages/BaggageBugs/BaggageBugs';
 const Body = () => {
     const approuter = createBrowserRouter([
         {path:"/",element:<Home/>},
@@ -16,8 +19,9 @@ const Body = () => {
         {
           path: "/project",element: <Projects />        },
         { path: "/project/procreate", element: <Procreate /> },
-    { path: "/project/pro1", element: <ProcreateView1 /> },
-
+    { path: "/project/matrimo", element: <MatriMO/> },
+    { path: "/project/appareldesign", element: <ApparelDesign/> },
+    { path: "/project/baggagebugs", element: <BaggageBugs/> },
 
     ])
   return (
