@@ -1,0 +1,10 @@
+.wave {
+  width: 90%;
+  height: 300px;
+}
+
+.wave path {
+  fill: none;
+  stroke: #8b7b7b; /* line color */
+  stroke-width: 2;
+}

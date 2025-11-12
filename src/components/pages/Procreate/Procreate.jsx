@@ -6,11 +6,12 @@ import skateboard from '../../../assets/skateboard.svg';
 import helmet from '../../../assets/helmet.svg';
 import arrowUp from '../../../assets/arrowUp.png'; // your upward arrow png
 import ProcreateView1 from "../Procreate/ProcreateView1";
-import './a.css';
+import ProcreateView2 from "../Procreate/ProcreateView2";
 
 const Procreate = () => {
   const [windowWidth, setWindowWidth] = useState(0);
   const [showProcreate, setShowProcreate] = useState(false);
+  const [currentView, setCurrentView] = useState(0); // 0: main, 1: view1, 2: view2
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
@@ -20,19 +21,25 @@ const Procreate = () => {
   }, []);
 
   const handleArrowClick = () => {
-    // Smooth scroll to top
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    // Wait a bit then show Procreate
-    setTimeout(() => setShowProcreate(true), 500);
+    // Cycle through views: main -> view1 -> view2 -> main
+    if (currentView === 0) {
+      setCurrentView(1);
+      setShowProcreate(true);
+    } else if (currentView === 1) {
+      setCurrentView(2);
+    } else if (currentView === 2) {
+      setCurrentView(0);
+      setShowProcreate(false);
+    }
   };
 
   return (
-    <div className="min-h-screen bg-white font-['Afacad'] flex flex-col overflow-x-hidden">
+    <div className="h-screen bg-white font-['Afacad'] flex flex-col overflow-hidden">
       <Header />
 
-      {/* Animate switch between Projects content and ProcreateView */}
+      {/* Animate switch between Projects content and ProcreateViews */}
       <AnimatePresence mode="wait">
-        {!showProcreate ? (
+        {currentView === 0 ? (
           <motion.div
             key="projects"
             initial={{ opacity: 0, y: 40 }}
@@ -115,9 +122,9 @@ const Procreate = () => {
               </div>
             </div>
           </motion.div>
-        ) : (
+        ) : currentView === 1 ? (
           <motion.div
-            key="procreate"
+            key="procreate-view1"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -40 }}
@@ -125,6 +132,17 @@ const Procreate = () => {
             className="flex-1 w-full mx-auto px-2 sm:px-4 py-2 sm:py-4 flex flex-col md:max-w-[95%] lg:max-w-[98%]"
           >
             <ProcreateView1 />
+          </motion.div>
+        ) : (
+          <motion.div
+            key="procreate-view2"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -40 }}
+            transition={{ duration: 0.6 }}
+            className="flex-1 w-full mx-auto px-2 sm:px-4 py-2 sm:py-4 flex flex-col md:max-w-[95%] lg:max-w-[98%]"
+          >
+            <ProcreateView2 />
           </motion.div>
         )}
       </AnimatePresence>
