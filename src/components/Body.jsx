@@ -10,6 +10,7 @@ import ProcreateView1 from './pages/Procreate/ProcreateView1';
 import MatriMO from './pages/MatriMo/MatriMO';
 import ApparelDesign from './pages/ApparelDesign/ApparelDesign';
 import BaggageBugs from './pages/BaggageBugs/BaggageBugs';
+import Aboutus from './pages/Aboutus';
 const Body = () => {
     const approuter = createBrowserRouter([
         {path:"/",element:<Home/>},
@@ -22,6 +23,9 @@ const Body = () => {
     { path: "/project/matrimo", element: <MatriMO/> },
     { path: "/project/appareldesign", element: <ApparelDesign/> },
     { path: "/project/baggagebugs", element: <BaggageBugs/> },
+    {path:"/project/procreate/view1",element:<ProcreateView1/>},
+    {path:"/aboutus",element:<Aboutus/>},
+    {path:"/ApparelDesign",element:<ApparelDesign/>  }
 
     ])
   return (
