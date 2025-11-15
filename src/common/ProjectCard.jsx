@@ -7,7 +7,8 @@ export const ProjectCard = ({
     borderTextPosition = [],
     variant = "outline",
     className = "",
-    showArrow= true
+    showArrow = true,
+    onClick = null
 }) => {
     const cardRef = useRef(null);
     const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
@@ -32,6 +33,7 @@ export const ProjectCard = ({
     return (
         <div 
             ref={cardRef}
+            onClick={onClick}
             className={`${baseClasses} ${variantClasses} ${className} `}
         >
             {borderTextPosition.includes("top") && (

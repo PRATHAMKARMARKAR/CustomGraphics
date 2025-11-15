@@ -11,6 +11,10 @@ import MatriMO from './pages/MatriMo/MatriMO';
 import ApparelDesign from './pages/ApparelDesign/ApparelDesign';
 import BaggageBugs from './pages/BaggageBugs/BaggageBugs';
 import Aboutus from './pages/Aboutus';
+import BaggageBugsView1 from './pages/BaggageBugs/BaggageBugsView1';
+import Asairspace from './pages/Asairspace';
+import Testimonial from './pages/Testimonial';
+// import Aboutus from './pages/Aboutus'
 const Body = () => {
     const approuter = createBrowserRouter([
         {path:"/",element:<Home/>},
@@ -25,8 +29,11 @@ const Body = () => {
     { path: "/project/baggagebugs", element: <BaggageBugs/> },
     {path:"/project/procreate/view1",element:<ProcreateView1/>},
     {path:"/aboutus",element:<Aboutus/>},
-    {path:"/ApparelDesign",element:<ApparelDesign/>  }
-
+    {path:"/project/ApparelDesign",element:<ApparelDesign/>  },
+   {path:"/project/baggagebugsView1",element:<BaggageBugsView1/>},
+   {path:"/project/aispace",element:<Asairspace/>},
+   {path:"/testimonial",element:<Testimonial/>},
+  //  {path:"/aboutus",element:<Aboutus/>}
     ])
   return (
  <div>

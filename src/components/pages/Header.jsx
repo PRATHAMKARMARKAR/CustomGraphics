@@ -7,17 +7,29 @@ const Header = () => {
 
   return (
     <div className="main h-20 overflow-hidden w-full text-black flex items-center justify-between px-10">
-      <div className="left centerSection1"onClick={() => {
- 
-  navigate('/');
-}}></div>
+      
+      {/* Logo / Left Section */}
+      <div
+        className="left centerSection1 cursor-pointer"
+        onClick={() => navigate('/')}
+      ></div>
 
+      {/* Right Navigation */}
       <div
         className="right flex gap-20 ml-8 mr-10 text-[#FD520F] font-medium md:text-xl text-xs"
         style={{ fontFamily: "'Afacad', sans-serif" }}
       >
-        <h1 className="cursor-pointer hover:underline">Contact Us</h1>
+        {/* Contact Us */}
+        <h1
+          className={`cursor-pointer hover:underline ${
+            location.pathname === '/contactus' ? 'underline' : ''
+          }`}
+          onClick={() => navigate('/contactus')}
+        >
+          Contact Us
+        </h1>
 
+        {/* Home */}
         <h1
           onClick={() => navigate('/')}
           className={`cursor-pointer ${
@@ -27,7 +39,15 @@ const Header = () => {
           Home
         </h1>
 
-        <h1 className="cursor-pointer hover:underline">About Us</h1>
+        {/* About Us */}
+        <h1
+          className={`cursor-pointer hover:underline ${
+            location.pathname === '/aboutus' ? 'underline' : ''
+          }`}
+          onClick={() => navigate('/aboutus')}
+        >
+          About Us
+        </h1>
       </div>
     </div>
   );

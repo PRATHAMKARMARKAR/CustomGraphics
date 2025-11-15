@@ -2,10 +2,10 @@
 import { useState, useEffect } from 'react';
 import { ProjectCard } from "../../../common/ProjectCard";
 import Header from "../Header";
-
+import { useNavigate } from 'react-router';
 const Projects = () => {
   const [windowWidth, setWindowWidth] = useState(0);
-
+  const navigate = useNavigate();
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
     setWindowWidth(window.innerWidth);
@@ -24,6 +24,7 @@ const Projects = () => {
                 <ProjectCard
                   className="w-full h-full min-h-[120px] sm:min-h-[150px] md:min-h-[180px]"
                   titleText="Procreate"
+                  onClick={() => navigate('/project/procreate')}
                   borderTextPosition={windowWidth >= 1200 ? ["top", "bottom"] : []}
                   variant="outline"
                 />
@@ -33,6 +34,7 @@ const Projects = () => {
                       <ProjectCard
                     className="w-full h-full"
                     titleText="Our Portfolio"
+                    onClick={() => navigate('/')}
                     borderTextPosition={windowWidth >= 1200 ? ["top", "bottom"] : []}
                     variant="filled"
                   />
@@ -41,6 +43,7 @@ const Projects = () => {
                   <ProjectCard
                     className="w-full h-full"
                     titleText="Apparel Designs"
+                    onClick={() => navigate('/project/appareldesign')}
                     borderTextPosition={windowWidth >= 1200 ? ["left", "right"] : []}
                     variant="outline"
                   />
@@ -51,6 +54,7 @@ const Projects = () => {
                <ProjectCard
                 className="w-full h-full"
                 titleText="Design Management for AS Airspace Travels"
+                 onClick={() => navigate('/project/aispace')}
                 borderTextPosition={windowWidth >= 1200 ? ["bottom"] : []}
                 variant="outline"
               />
@@ -62,6 +66,7 @@ const Projects = () => {
               <ProjectCard
                 className="w-full h-full"
                 titleText="MatriMO"
+                onClick={() => navigate('/project/matrimo')}
                 borderTextPosition={windowWidth >= 1200 ? ["left", "right"] : []}
                 variant="outline"
               />
@@ -70,6 +75,7 @@ const Projects = () => {
               <ProjectCard
                 className="w-full h-full"
                 titleText="Baggage Bugs"
+                onClick={() => navigate('/project/baggagebugs')}
                 borderTextPosition={windowWidth >= 1200 ? ["top", "bottom"] : []}
                 variant="filled"
               />

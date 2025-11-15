@@ -1,13 +1,16 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ProjectCard } from "../../../common/ProjectCard";
 import Header from "../Header";
+import can from '../../../assets/can.png';
 import skateboard from '../../../assets/skateboard.svg';
 import helmet from '../../../assets/helmet.svg';
 import arrowUp from '../../../assets/arrowUp.png'; // your upward arrow png
 import ProcreateView1 from "../Procreate/ProcreateView1";
 import ProcreateView2 from "../Procreate/ProcreateView2";
-
+import skates from "../../../assets/skates.svg";
+import threecan from "../../../assets/threecan.svg";
+import spex from "../../../assets/spex.png";
 const Procreate = () => {
   const [windowWidth, setWindowWidth] = useState(0);
   const [showProcreate, setShowProcreate] = useState(false);
@@ -60,26 +63,42 @@ const Procreate = () => {
                       variant="outline"
                     />
                   </div>
+
+                  {/* Right area with two empty ProjectCard boxes that will get images */}
                   <div className="relative md:col-span-7 flex flex-col gap-2 sm:gap-4">
-                    <div className="flex-1 min-h-[120px]">
+                    <div className="flex-1 min-h-[120px] relative">
                       <ProjectCard
                         className="w-full h-full"
                         titleText=""
                         variant="outline"
                         showArrow={false}
                       />
+                      {/* Image overlaid inside the first empty card */}
+                      <img
+                        src={can}
+                        alt="Random art"
+                         className="absolute  top-1/2 left-1/2 w-[45%] h-50 object-contain -translate-x-1/2 -translate-y-1/2 pointer-events-none z-10"
+                      />
                     </div>
-                    <div className="flex-1 min-h-[120px]">
+
+                    <div className="flex-1 min-h-[120px] relative">
                       <ProjectCard
                         className="w-full h-full"
                         titleText=""
                         variant="outline"
                         showArrow={false}
                       />
+                      {/* Image overlaid inside the second empty card */}
+                      <img
+                        src={spex}
+                        alt="Random design"
+                        className="absolute top-1/2 left-1/2 w-[60%] h-auto object-contain -translate-x-1/2 -translate-y-1/2 pointer-events-none z-10"
+                      />
                     </div>
+
                     <img
-                      className="absolute w-4/12 -top-10 h-full object-contain rotate-[11deg] z-10 pointer-events-none"
-                      src={skateboard}
+                      className="absolute w-4/12 -top-10 h-full object-contain rotate-[11deg] z-0 pointer-events-none"
+                      
                       alt="Skateboard"
                     />
                   </div>
@@ -94,8 +113,15 @@ const Procreate = () => {
                     variant="outline"
                     showArrow={false}
                   />
+                  {/* Image overlaid inside the right-top empty card */}
                   <img
-                    className="absolute w-1/5 -top-8 right-8 h-full object-contain z-10 pointer-events-none"
+                    src={threecan}
+                    alt="Random sketch"
+                    className="absolute top-1/2 left-1/2 w-[45%] h-auto object-contain -translate-x-1/2 -translate-y-1/2 pointer-events-none z-10"
+                  />
+
+                  <img
+                    className="absolute w-1/5 -top-8 right-8 h-full object-contain z-0 pointer-events-none"
                     src={helmet}
                     alt="Helmet"
                   />
@@ -104,20 +130,32 @@ const Procreate = () => {
             </div>
 
             <div className="grid grid-cols-12 mt-4">
-              <div className="col-span-2 min-h-[120px] max-h-[120px]">
+              <div className="col-span-2 min-h-[120px] max-h-[120px] relative">
                 <ProjectCard
                   className="w-full h-full"
                   titleText=""
                   variant="outline"
                   showArrow={false}
                 />
+                {/* Small image inside the small left bottom card */}
+                <img
+                  src={skates}
+                  alt="Random abstract"
+                  className="absolute top-1/2 left-1/2 w-[70%] h-auto object-contain -translate-x-1/2 -translate-y-1/2 pointer-events-none z-10"
+                />
               </div>
-              <div className="col-span-10 min-h-[120px] max-h-[120px]">
+              <div className="col-span-10 min-h-[120px] max-h-[120px] relative">
                 <ProjectCard
                   className="w-full h-full"
                   titleText=""
                   variant="outline"
                   showArrow={false}
+                />
+                {/* Wide image inside the bottom-right large card */}
+                <img
+                  src={skateboard}
+                  alt="Random color"
+                  className="absolute top-1/2 left-1/2 w-[40%] h-30 object-contain -translate-x-1/2 -translate-y-1/2 pointer-events-none z-10"
                 />
               </div>
             </div>
@@ -163,7 +201,7 @@ const Procreate = () => {
         <button
           onClick={handleArrowClick}
           style={{
-            right: "635px",
+            right: "605px",
             left: "auto",
             top: "137px",
             cursor: 'pointer'
