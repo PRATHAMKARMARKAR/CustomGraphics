@@ -22,14 +22,34 @@ const Contactus = () => {
         <div className="grid grid-cols-2 gap-150 -mt-10 z-10">
           {/* Left side */}
           <div className="flex flex-col space-y-48">
-            <ContactButton icon={<FaLinkedinIn />} label="Linkedin" active/>
-            <ContactButton icon={<SiGmail />} label="Gmail" active />
+            <ContactButton 
+              icon={<FaLinkedinIn />} 
+              label="Linkedin" 
+              link="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Aorganization%3A105082559&keywords=custom%20graphics&origin=RICH_QUERY_SUGGESTION&position=0&sid=%3BdV" 
+              active
+            />
+            <ContactButton 
+              icon={<SiGmail />} 
+              label="Gmail" 
+                link="mailto:customsgraphics20@gmail.com"
+              active 
+            />
           </div>
 
           {/* Right side */}
           <div className="flex flex-col space-y-48">
-            <ContactButton icon={<FaWhatsapp />} label="Whatsapp" active/>
-            <ContactButton icon={<FaInstagram />} label="Instagram" active />
+            <ContactButton 
+              icon={<FaWhatsapp />} 
+              label="Whatsapp" 
+                link="https://wa.me/916260729359" 
+              active
+            />
+            <ContactButton 
+              icon={<FaInstagram />} 
+              label="Instagram" 
+              link="https://www.instagram.com/custom.graphics20/?hl=en" 
+              active 
+            />
           </div>
         </div>
 
@@ -42,13 +62,16 @@ const Contactus = () => {
   );
 };
 
-const ContactButton = ({ icon, label, active }) => {
+const ContactButton = ({ icon, label, link, active }) => {
   return (
-    <button
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
       className={`flex items-center justify-center space-x-4 border-2 ${
         active
           ? "border-orange-500 text-orange-500"
-          : "border-gray-400 text-gray-500"
+          : "border-gray-500 text-gray-500"
       } 
       px-15 py-4 rounded-full text-2xl font-semibold 
       transition-all hover:border-orange-500 hover:text-gray-500 
@@ -56,7 +79,7 @@ const ContactButton = ({ icon, label, active }) => {
     >
       <span className="text-3xl">{icon}</span>
       <span>{label}</span>
-    </button>
+    </a>
   );
 };
 
